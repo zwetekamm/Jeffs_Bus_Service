@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jeff's Bus Service - New Orleans, LA</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shuttle and limo bus transportation for private events - New Orleans, Baton Rouge, Mandeville, Slidell LA.">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500|Montserrat:800,800i|Open+Sans:600" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+      <div class="d-lg-none text-center">
+          <h1>Jeff's</h1>
+          <h1 id="subtitle">Bus Service</h1>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="container d-none d-lg-block col-md-3">
+            <h1>Jeff's</h1>
+            <h1 id="subtitle">Bus Service</h1>
+        </div>
+    </div>
+  </header>
+    
+  <nav class="navbar top-navbar navbar-expand-lg navbar-dark" id="mainNav" data-toggle="sticky-onscroll">
+    <div class="container-fluid">
+      <div class="navbar-brand" style="color: #e6df44;">Jeff's</div>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item ml-auto">
+            <a class="nav-link js-scroll-trigger" href="#collapse-services">Services</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <a class="nav-link js-scroll-trigger" href="#collapse-contact">Contact</a>
+          </li>
+          <li class="nav-item ml-auto">
+            <a class="nav-link js-scroll-trigger" href="#collapse-about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="jumbotron" class="container-fluid text-center py-3 my-2">
+    <div class="row">
+      <div class="container col-md-6">
+          <h3 class="col-md-8">Local Travel</h3>
+          <h5>New Orleans, Baton Rouge, Mandeville, Slidell</h5>
+        </div>
+        <div class="container col-md-6">
+          <h3 class="col-md-8">Private Events</h3>
+          <h5>Weddings, Prom, Tours, Winery, Brewery, Corporate</h5>
+        </div>
+    </div>
+
+    <button class="btn btn-rounded btn-lg col-md-4 my-4" data-toggle="modal" data-target="#modalForm">Request a Reservation</button>
+  </div>
+
+  <div class="modal fade" id="modalForm" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Reservation Request</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        
+        <div class="modal-body">
+          <p class="statusMsg"></p>
+          <form role="form" method="POST">
+            <div class="form-group">
+              <label for="inputName">Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Your email">
+            </div>
+            <div class="form-group">
+              <label for="inputEvent">Event</label>
+              <input type="text" class="form-control" id="inputEvent" placeholder="Wedding, Prom, Tour, etc...">
+            </div>
+            <div class="form-group">
+              <label for="inputMessage">Message</label>
+              <textarea class="form-control" id="inputMessage" placeholder="Your message"></textarea>
+            </div>
+          </form>
+        </div>
+        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary submitBtn" onclick="submitContactForm()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-md-11 mx-auto">  
+    <div class="card-header">
+      <a class="collapsed d-block" data-toggle="collapse" href="#collapse-feature" aria-expanded="true" aria-controls="card-collapse" id="collapsed">
+        <div class="row">
+          <div class="d-none d-md-block col-md-3 my-auto text-center">
+              <img src="images/chevron-up64.png">
+          </div>
+          <div class="col-md-9 my-auto">
+            <h2>Coming Soon</h2>
+            <h5>Shuttle between Slidell and New Orleans</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <div id="collapse-feature" class="collapse" aria-labelledby="collapsed">
+      <div class="card-body lead">
+        <p>Our 24-passenger shuttle bus is currently undergoing interior renovations!</p>
+        <p>Once completed, we will begin a weekday commute between Slidell (AM) and 
+          downtown New Orleans (PM).</p>
+        <p>Send a request if you have any questions regarding the upcoming service! </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-md-11 mx-auto">  
+    <div class="card-header">
+      <a class="collapsed d-block" data-toggle="collapse" href="#collapse-services" aria-expanded="true" aria-controls="card-collapse" id="collapsed">
+        <div class="row">
+          <div class="d-none d-md-block col-md-3 my-auto text-center">
+            <img src="images/chevron-up64.png">
+          </div>
+          <div class="col-md-9 my-auto">
+            <h2>Services</h2>
+            <h5>Private Events and Public Commute</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+      
+    <div id="collapse-services" class="collapse" aria-labelledby="collapsed">
+      <div class="card-body row lead text-center">
+          <div class="col-md-6">
+              <ul>
+                <h4>24-passenger Limo Bus</h4>
+                <li>Corporate Pickup</li>
+                <li>Winery</li>
+                <li>Brewery</li>
+                <li>Tour</li>
+              </ul>
+            </div>
+            <div class="col-md-6">
+              <ul>
+                <h4>18-passenger Party Bus</h4>
+                <li>Wedding</li>
+                <li>Prom</li>
+                <li>Party</li>
+              </ul>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-md-11 mx-auto">  
+    <div class="card-header">
+      <a class="collapsed d-block" data-toggle="collapse" href="#collapse-contact" aria-expanded="true" aria-controls="card-collapse" id="collapsed">
+        <div class="row">
+          <div class="d-none d-md-block col-md-3 my-auto text-center">
+            <img src="images/chevron-up64.png">
+          </div>
+          <div class="col-md-9 my-auto">
+            <h2>Contact</h2>
+            <h5>By Form, Email, or Phone</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <div id="collapse-contact" class="collapse" aria-labelledby="collapsed">
+      <div class="card-body row mx-auto">
+        <div class="col-md-6">
+          <p>For all requests and inquiries, we prefer you use the Reservation button and complete a request.
+            However, you can also make a request directly by email or phone below.
+          </p>
+          <p><img src="images/email_blue.png">&ensp;<a href="@email" target="_blank" style="color: inherit;">@email</a></p>
+          <p><img src="images/phone_blue.png">&ensp;@phone</p>
+        </div>
+
+        <div class="col-md-6 text-center">
+          <p><img class="rounded mt-3 image-fluid" style="max-width: 100%; height: auto;" src="">&ensp;*contact img*</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card col-md-11 mx-auto">  
+    <div class="card-header">
+      <a class="collapsed d-block" data-toggle="collapse" href="#collapse-about" aria-expanded="true" aria-controls="card-collapse" id="collapsed">
+        <div class="row">
+          <div class="d-none d-md-block col-md-3 my-auto text-center">
+            <img src="images/chevron-up64.png">
+          </div>
+          <div class="col-md-9 my-auto">
+            <h2>About</h2>
+            <h5>Our Trusted Driver</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <div id="collapse-about" class="collapse" aria-labelledby="collapsed">
+      <div class="card-body lead">
+        <p>We are a limited liability company (LLC).</p>
+        <p>Our owner, Jeff, has 24 years experience as a school bus driver in 5 years experience as a limousine driver. 
+          Now, we have expanded to private bus routes and tours.
+        </p>  
+        <p>Jeff has also drove several long-distance trips for local churches and organizations to locations including 
+          Mexico, South Dakota, Chicago, Miami, and Houston.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-4">
+    <p class="m-0 text-center">Website Design: Zack Wetekamm</p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+  <script src="contact.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
