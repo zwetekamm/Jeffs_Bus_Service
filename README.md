@@ -1,4 +1,4 @@
-# Jeffs_Bus_Service--Inactive
+# JBS--Inactive
 
 Small business website that I created Feb 2019-2020; Domain no longer active.
 
